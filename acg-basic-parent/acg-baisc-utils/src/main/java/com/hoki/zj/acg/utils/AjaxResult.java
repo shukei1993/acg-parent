@@ -1,12 +1,14 @@
 package com.hoki.zj.acg.utils;
 
-//Ajax请求响应对象的类
+/**
+ * Ajaxリクエストのリスポンス
+ */
 public class AjaxResult {
     private boolean success = true;
-    private String message = "操作成功!";
+    private String message = "操作は成功しました!";
 
 
-    //返回到前台对象
+    //　フロント側に返すオブジェクト
     private Object resultObj;
 
     public boolean isSuccess() {
