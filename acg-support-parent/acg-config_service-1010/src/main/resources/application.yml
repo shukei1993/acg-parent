@@ -1,0 +1,28 @@
+server:
+  port: 1010
+spring:
+  application:
+    name: acg-config
+  rabbitmq: #集成RabbitMQ如果配置是默认，可以省略
+    host: localhost #mq连接地址
+    port: 5672 #mq端口
+    username: guest
+    password: guest
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shukei1993/acg-config.git
+          username: shukei1993
+          password: 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
+          search-paths: src/main/resources # 如果不是在根路径下面需要加搜索地址
+#actuator配置
+management:
+  endpoint:
+    health:
+      show-details: always #打印日志
+  endpoints:
+    web:
+      exposure:
+        include: "*" #向外暴露的接口，这里*则表示所有的actuator接口都可以被访问
+    enabled-by-default: true  #开启actuator监控

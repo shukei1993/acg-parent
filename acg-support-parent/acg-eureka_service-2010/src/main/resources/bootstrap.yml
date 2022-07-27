@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev #默认启动是dev
+  rabbitmq: #集成RabbitMQ如果配置是默认，可以省略
+    host: localhost #mq连接地址
+    port: 5672 #mq端口
+    username: guest
+    password: guest
+  cloud:
+    config:
+      profile: ${spring.profiles.active} #环境 java -jar -d spring.profiles.active=test hrm-eureak.jar
+      name: application-eureka #gitee上面名称
+      label: main #分支
+      uri: http://127.0.0.1:1010 #配置config-server
+    bus: #这行代码很重要，根据官方定义的标准来的 ,就是为了产生一个bus.id
+      id: ${spring.application.name}:${spring.cloud.config.profile}:${random.value}
