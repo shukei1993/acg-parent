@@ -8,7 +8,7 @@ public class AjaxResult {
     private String message = "操作は成功しました!";
 
 
-    //　フロント側に返すオブジェクト
+    // フロント側に返すオブジェクト
     private Object resultObj;
 
     public boolean isSuccess() {
