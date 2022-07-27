@@ -48,11 +48,11 @@ public class AjaxResult {
 
 
     /*
-    //成功しました
+    // 成功しました
     public com.hoki.zj.acg.utils.AjaxResult() {
     }
 
-    //失败して、エラーメッセージを返す
+    // 失败して、エラーメッセージを返す
     public com.hoki.zj.acg.utils.AjaxResult(String message) {
         this.success = false;
         this.message = message;
